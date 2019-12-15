@@ -49,6 +49,5 @@ int main()
             scanf("%d",&chans.dur);    
         }
     }
-    printf("auteur %c annes %d titre %s liste %s nbr %d name %s period %d",dis.autr,dis.annes,dis.titre,dis.liste,dis.nb,chans.tit,chans.dur);
-
+    printzf("auteur %c annes %d titre %s liste %s nbr %d name %s period %d",dis.autr,dis.annes,dis.titre,dis.liste,dis.nb,chans.tit,chans.dur);
 }
