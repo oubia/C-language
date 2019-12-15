@@ -45,18 +45,18 @@
 //     printf("no solution\n");
 // }
 
-int main()
-{
-    int n,i,d;
-    n=0;
-    printf("donner le nbr");
-    scanf("%d",&n);
-    for ( i = n-1; i < n+9; i++)
-    {
-        d=n+i;
-        printf("les nombres sons :%d\n",d);
-    }  
-}
+// int main()
+// {
+//     int n,i,d;
+//     n=0;
+//     printf("donner le nbr");
+//     scanf("%d",&n);
+//     for ( i = n-1; i < n+9; i++)
+//     {
+//         d=n+i;
+//         printf("les nombres sons :%d\n",d);
+//     }  
+// }
 int main()
 {
     int n,i,d;
@@ -71,3 +71,17 @@ int main()
         i++;
     } 
 }
+
+// main()
+// {
+//     int n,p,x,y;
+//     printf("donner vous partant:\n");
+//     scanf("%d",&n);
+//     printf("donner le joues :\n");
+//     scanf("%d",&p);
+//     x==fabs(n)/fabs(n-p);
+//     y==fabs(n)/fabs(fabs(p)*fabs(n-p));
+//     printf("l'ordre de chance de ganeg :%d\n",x);
+//     printf("desordre de chance de ganeg :%d\n ",y);
+     
+// }
