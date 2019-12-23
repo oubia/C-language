@@ -84,3 +84,117 @@
 //     printf("l'ordre de chance de ganeg :%d\n",x);
 //     printf("desordre de chance de ganeg :%d\n ",y);
 // }
+
+
+
+
+ struct etudiont
+{
+    int nExame;
+    char matier[30];
+    float qoaf;
+    data d;
+    struct etudiont *suivant;
+};
+typedef struct 
+{
+    int j;
+    int M;
+    int year;
+}data;
+
+typedef struct etudiont Etud;
+Etud *l;
+Etud *creer(int n){
+    Etud *list;
+    list=(Etud*)malloc(sizeof(Etud));
+    list->val=n;
+    list->suivant= NULL;
+    return list;
+}
+//pour insere un element on faits.
+ Etud *isertD(int v,Etud *l){
+     Etud *nem;
+     nem=(Etud *)malloc(sizeof(Etud));
+     if (!nem)
+     {
+         printf("non reussie");
+         exit(1);
+     }
+     nem->val=v;
+     nem->suivant=l;
+     l=nem;
+     return l;
+ }
+ // et pour l'affichage.
+ void affichage(Etud *l){
+     Etud*pc=l;
+     while (pc)
+     {
+         printf("%d\n",pc->val);
+         pc=pc->suivant;
+     }
+     
+ }
+//fonction pour insertion un element en fine de liste l.
+Etud *inserF(int v,Etud *l){
+    Etud *nem,*p;
+    nem=(Etud*)malloc(sizeof(Etud));
+    if (!nem)
+    {
+        printf("no reussie");
+        exit(1);
+    }
+    nem->val=v;
+    nem->suivant=NULL;
+    if (l ==NULL)
+    {
+        l=nem;
+    }
+    else
+    {
+        p=l;
+        p->suivant=nem;
+    }
+    return l;
+}
+//pour retourne la taille de list l .
+int taille(Etud *l){
+    int compt=0;
+    cEtud *p=l;
+    while (p!=NULL )
+    {
+        compt++;
+        p=p->suivant;
+    }
+    return compt;
+}
+//pour suppreme un element.
+Etud *suppe(Etud *noeud,Etud*l){
+    Etud *p;
+    p=l;
+    while ((p->suivant!=noeud))
+    {
+        p=p->suivant;
+        p=p->suivant=noeud->suivant;
+    }
+   free(noeud);
+   return l; 
+}
+main()
+{
+    Etud*l;
+    int n,m,b;
+
+    printf("donner le nombre \n");
+    scanf("%d",n);
+    l=creer(n);
+    printf("donner le nomber vous volez inseree");
+    scanf("%d",&m);
+    l=isertD(m,l);
+    printf("donner le nomber vous volez inseree a la fine");
+    scanf("%d",&b);
+    printf("la taille de chaine et :\n",taille(l));
+
+
+}
