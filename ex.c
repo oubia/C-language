@@ -105,23 +105,33 @@ typedef struct
 
 typedef struct etudiont Etud;
 Etud *l;
-Etud *creer(int n){
-    Etud *list;
+Etud *creer(int nExame,char matier[30],float qoaf,int j,int M,int year){
+    Etud *list;int n;char m,a,b,c;float c;
     list=(Etud*)malloc(sizeof(Etud));
-    list->val=n;
+    list->nExame=n;
+    list->matier[30]=m;
+    list->qoaf=c;
+    list->d.j=a;
+    list->d.M=b;
+    list->d.year=c;
     list->suivant= NULL;
     return list;
 }
 //pour insere un element on faits.
- Etud *isertD(int v,Etud *l){
-     Etud *nem;
+ Etud *isertD(int nExame,char matier[30],float qoaf,int j,int M,int year,Etud *l){
+     Etud *nem;int n;char m,a,b,c;float c;
      nem=(Etud *)malloc(sizeof(Etud));
      if (!nem)
      {
          printf("non reussie");
          exit(1);
      }
-     nem->val=v;
+     nem->nExame=n;
+     nem->matier[30]=m;
+     nem->qoaf=c;
+     nem->d.j=a;
+     nem->d.M=b;
+     nem->d.year=c;
      nem->suivant=l;
      l=nem;
      return l;
@@ -185,7 +195,8 @@ main()
 {
     Etud*l;
     int n,m,b;
-
+    
+    l=(Etud*)malloc(sizeof(Etud));
     printf("donner le nombre \n");
     scanf("%d",n);
     l=creer(n);
